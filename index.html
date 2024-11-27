@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link href="snake.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="game-title">Snake Game</h1>
+    <div id="game-container">
+        <div id="board-container">
+            <div id="board"></div>
+        </div>
+        <div class="game-info">
+            <div class="controls-container">
+                <div class="score-container">
+                    <div class="score-box">
+                        <div class="score-label">Score</div>
+                        <div id="scoreBoard">0</div>
+                    </div>
+                    <div class="score-box">
+                        <div class="score-label">High Score</div>
+                        <div id="highScoreBoard">0</div>
+                    </div>
+                </div>
+                <div class="game-controls">
+                    <button id="start-button">Play</button>
+                    <button id="pause-button" disabled>Pause</button>
+                    <select id="difficulty">
+                        <option value="300">Easy</option>
+                        <option value="200" selected>Medium</option>
+                        <option value="100">Hard</option>
+                    </select>
+                </div>
+                <div class="instructions">
+                    <h3>How to Play</h3>
+                    <p>Easy Mode: Use arrow keys to move one step at a time</p>
+                    <p>Medium/Hard Mode: Snake moves automatically</p>
+                    <p>Don't hit the walls or yourself!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOver" class="game-over">
+        <div class="game-over-content">
+            <h2>Game Over!</h2>
+            <p>Score: <span id="finalScore">0</span></p>
+            <button id="restart-button" onclick="startGame()">Play Again</button>
+        </div>
+    </div>
+    <script src="snake.js"></script>
+</body>
+</html>
